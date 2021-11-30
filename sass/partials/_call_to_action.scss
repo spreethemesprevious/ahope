@@ -1,0 +1,97 @@
+// Call to Action
+
+.call_to_action_area{
+	@include gradient_bg_2(top);
+	.ct_wrapper{
+		min-height: 260px;
+		.ct_action{
+			h3{
+				font-size: 36px;
+				line-height: 1.5;
+				@include firasans(700);
+				color: #fff;
+				margin-bottom: 10px;
+				span{
+					color: $yellow;
+				}
+			}
+			p{
+				@include firasans(400);
+				font-size: 16px;
+				line-height: 1.5;
+				color: #fff;
+			}
+		}			
+	}
+	.boxed_btn{ 
+		@extend .gradient_btn_main;
+		margin: 0 10px;
+		border-radius: 30px;
+		text-transform: uppercase;
+		color:#fff;
+		padding: 15px 25px;
+		border: 2px solid $green;
+		background: $green;
+		&:after{
+			border:none;
+			border-radius: 30px;
+			background: $btn_bg_2;
+		}
+		&:hover{ 
+			border:2px solid #fff;
+			background: transparent;
+		}
+	}		
+}
+	// Responsive
+@media #{$medium_device}{
+	.call_to_action_area {
+		.ct_action {
+		    padding-right: 50px;
+			h3{ font-size: 24px;  }
+		    p{font-size: 14px;}
+		}
+	    .boxed_btn{
+	    	font-size: 14px;
+	    	padding: 12px 22px;
+	    }
+    }
+}
+@media #{$tab_device}{
+	.call_to_action_area {
+		.ct_wrapper .ct_action{
+		    h3{ font-size: 24px; }
+		    p{font-size: 14px;}
+		}
+		.boxed_btn {
+		    font-size: 14px;
+		    padding: 12px 22px;
+		}
+	}
+}
+@media #{$small_mobile}{
+	.call_to_action_area {
+		.ct_wrapper {
+		    min-height: 140px;
+
+			.ct_action{
+			    width: 100%;
+				text-align: center;
+			    h3{ font-size:18px; }
+			    p{font-size: 14px;}
+			}
+		}
+		.boxed_btn {
+		    margin-bottom: 20px;
+		    padding: 12px 22px;
+		    font-size: 14px;
+		}
+	}
+}
+@media #{$large_mobile}{
+	.call_to_action_area {
+		.boxed_btn {
+		    margin-bottom: 30px;
+		}
+	}
+}

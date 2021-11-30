@@ -1,0 +1,77 @@
+// Feature
+	
+.feature_area{
+	@extend .section_padding_2;
+	background-image: url('../img/circle.png') ;
+	background-size: 45%;
+    background-repeat:  no-repeat;
+    background-position:  -35% 160%;
+	background-size: 35%;
+	background-repeat: no-repeat;
+}
+.single_feature_item {
+	margin: 0 30px 50px 0;
+	border-radius: 20px;						
+    padding: 25px;
+    @include transition(all,.3s,ease-in-out);
+    top:0;
+    z-index: 1;
+    position:relative;
+    border: 1px solid #d2e5ff;
+	&:hover {
+	    border: 1px solid transparent;
+	    @include boxshadow(0px, 0px, 15px, 0px, rgba(0,0,0, 0.3), false);
+	}
+	&:hover .feature_icon {
+	    position: absolute;
+	    top: -20px;
+	}
+    h3 {
+	    font-size: 20px;
+	    margin-bottom:10px;
+	    @include firasans(500);
+	    @include gradient_bg_2(right);
+ 	    -webkit-background-clip: text;
+  		-webkit-text-fill-color: transparent;
+	}
+	p {
+	    font-size: 14px;
+	    color: $text;
+	    line-height:1.75;
+	    @include firasans(400);
+	    margin-bottom: 10px;
+	}
+	.feature_icon {	
+	    position: absolute;
+	    top: -25px;
+	    right: -25px;
+	    width: 50px;
+		height: 50px;
+		@include gradient_bg_2(top);
+		@include transition(all,.2s,ease-in-out);
+		border-radius: 12px;color: $dark; 
+		i{
+			font-size: 24px;
+			color: #fff;
+		}	
+	}
+}
+
+
+	// Responsive
+@media #{$medium_device}{
+
+}
+@media #{$tab_device}{
+	.single_feature_item{
+		margin-bottom: 45px;
+	}
+}
+@media #{$small_mobile}{
+	.single_feature_item{
+		margin-bottom: 35px;
+	}
+}
+@media #{$large_mobile}{
+	
+}

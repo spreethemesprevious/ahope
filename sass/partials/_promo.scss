@@ -1,0 +1,41 @@
+// Promo (Video)
+
+.promo_content_2{	
+	overflow: hidden;
+	width: 100%;
+	border-radius: 30px;
+	position: relative;
+	height: 440px;
+	img{
+		display: block;
+		height: 100%;
+		width: auto;
+		max-width: 1000%;
+	}
+	&:after{
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		content:'';
+		position: absolute;
+		@include gradient_bg(top);
+		opacity: .2;
+		z-index: 2;
+	}
+}
+
+	//Responsive
+@media #{$medium_device}{
+}
+@media #{$tab_device}{
+	.promo_content_2{ margin-top: 30px; height: 330px;}	
+}
+@media #{$small_mobile}{
+	.promo_content_2{ margin-top: 30px; height: 330px;}		
+}
+
+@media #{$large_mobile}{
+
+	
+}
